@@ -1,0 +1,108 @@
+/*Background color*/
+body
+{
+    background-color: #16406d;
+}
+
+/*Header turned black*/
+.headerFix
+{
+    background-color: rgb(149, 202, 202);
+    height: 70px;
+}
+
+/* Makes logo small for corner of page */
+.smallLogo
+{
+    max-height: 55px;
+    max-width: auto;
+}
+
+/* Scoring Label */
+.scoreLabel
+{
+    font-weight: bold;
+    font-size: 25px;
+    color: #16506d;
+}
+
+/*Copyright fix*/
+.copyRight
+{
+    font-size: 10px;
+    color: #eeeeef;
+}
+
+/*Makes the icons small*/
+.circleImage
+{
+    width: 100px;
+    height: 100px;
+}
+
+/*Rounds off the edges*/
+.modal-content
+{
+    border-radius: 1.59rem;
+    overflow: hidden;
+}
+
+/*Top of Question header*/
+.modal-header
+{
+    background-color: #16506d;
+    color: #fff;
+}
+
+/*Coloring for the jeapordy style pieces*/
+.jeapordyTile
+{
+    background-color: rgb(149, 202, 202);
+    color: #16506d;
+    font-weight: bold;
+    font-size: 45px;
+    width: 350px;
+    height: 200px;
+}
+
+/*Shows what the tile looks like after answering it*/
+.answered
+{
+    background-color: grey;
+    color: #fff;
+    font-weight: bold;
+    font-size: 45px;
+    width: 350px;
+    height: 200px;
+}
+
+/*Makes the pictures small*/
+.smallPicture
+{
+    width: 100px;
+    height: 100px;
+}
+
+table , td {
+    border: 2px solid black;
+    background-color: rgb(149, 202, 202);
+    color: black;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  } 
+
+th {
+    color: #16506d;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+    border: 5px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div {
+    text-align: center;
+}
