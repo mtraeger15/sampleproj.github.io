@@ -1,2 +1,114 @@
-# hw2CS460.github.io
-hello
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Riddles and Tricks</title>
+    <meta charset="UTF-8">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Game CSS -->
+    <link rel="stylesheet" type="text/css" href="css/game.css">
+</head>
+
+<body>
+
+    <!--Header, with sticky top-->
+    <div class="d-flex flex-row justify-content-around headerFix sticky-top">
+        <div class="py-3">
+            <p class="scoreLabel">SCORE: 0</p>
+        </div>
+        <div class="py-2">
+            <img src="images/myLogo.png" class="img-fluid smallLogo">
+        </div>
+    </div>
+    
+    <!--Function to play "This is Jeopardy"--> 
+    <p class="playBeginningAudio"></p>
+
+    <!--Jeapordy Style Game Board Tiles using Flex-Boxes-->
+    <div class="container py-md-3 py-sm-1 ">
+        <div class="d-flex flex-row justify-content-around flex-wrap">
+            <div class="jeapordyTile m-2 d-flex justify-content-center align-items-center" data-num="1" onclick="showQuestion(1)">100
+            </div>
+            <div class="jeapordyTile m-2 d-flex justify-content-center align-items-center" data-num="2" onclick="showQuestion(2)">100
+            </div>
+            <div class="jeapordyTile m-2 d-flex justify-content-center align-items-center" data-num="3" onclick="showQuestion(3)">100
+            </div>
+            <div class="jeapordyTile m-2 d-flex justify-content-center align-items-center" data-num="4" onclick="showQuestion(4)">200
+            </div>
+            <div class="jeapordyTile m-2 d-flex justify-content-center align-items-center" data-num="5" onclick="showQuestion(5)">200
+            </div>
+            <div class="jeapordyTile m-2 d-flex justify-content-center align-items-center" data-num="6" onclick="showQuestion(6)">200
+            </div>
+            <div class="jeapordyTile m-2 d-flex justify-content-center align-items-center" data-num="7" onclick="showQuestion(7)">500
+            </div>
+            <div class="jeapordyTile m-2 d-flex justify-content-center align-items-center" data-num="8" onclick="showQuestion(8)">500
+            </div>
+            <div class="jeapordyTile m-2 d-flex justify-content-center align-items-center" data-num="9" onclick="showQuestion(9)">500
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Question Set-Up using Modals-->
+    <div class="modal fade" tabindex="-1" rol="dialog" id="questionModal">
+        <div class="modal-dialog modal-lg" rol="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="d-flex flex-row">
+                        <div class="imageCropper d-block">
+                            <img class="rounded-circle smallPicture" id="questionImage">
+                        </div>
+                        <div class="ml-3 mt-2 align-items-center">
+                            <p class="smallLabel" id="questionLabel"></p>
+                            <h4 id="questionWords"></h4>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column py-3">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="optionA"
+                            onclick="submitQuestion()"></button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="optionB"
+                            onclick="submitQuestion()"></button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="optionC"
+                            onclick="submitQuestion()"></button>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="optionD"
+                            onclick="submitQuestion()"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Dynamically creating the table via js-->
+    <hr />
+    <hr />
+    <img src="https://bit.ly/20qKWK0" style="display:none">
+    <div style="text-align: center;">
+            <input type="button" value="See Results" onclick="GenerateTable()"/>
+            <div id="dvTable"></div>
+    </div>
+    <hr />
+    <hr />
+
+    <!--Copyright-->
+    <div class="d-flex flex-column align-items-center">
+        <img src="images/footer.png" class="img-fluid d-none d-sm-block">
+        <p class="copyRight">Megan Traeger &copy; 2019</p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Game JS -->
+    <script src="js/questions.js"></script>
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>
